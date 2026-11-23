@@ -10,19 +10,6 @@
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
-	Your code is close, but it will likely fail automated grading tests due to a few missing requirements from the prompt:
-
-1. **Missing Ordered List (`<ol>`):** The instructions require an **ordered list** containing the three media items (`<ol>` with `<li>` tags around each media element). Right now, your `<img>`, `<video>`, and `<audio>` tags are just placed directly on the page without `<ol>` and `<li>`.
-
-
-2. **Table Column Headers:** The Table Requirements specify **"2 columns for Roll numbers and Names"**. While your table has 2 columns and 3 rows of data, using `Roll numbers` and `Names` as your `<th>` headers is much safer in case the test script checks for those exact header names.
-
-
-3. **Extra Space in Audio URL:** Your `<audio>` `src` has a leading space (`src=" http://..."`), which can cause strict URL-matching tests to fail.
-
-### Corrected Code
-
-```html
 <table>
     <thead>
         <tr>
@@ -61,8 +48,6 @@
         <audio src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg" controls></audio>
     </li>
 </ol>
-
-```
 </body>
 
 </html>
