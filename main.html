@@ -10,37 +10,59 @@
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
-		
-    		<table>
-				<thead>
-		<tr>
-		<th>Players</th>
-		<th>PPG</th>
-		</tr>
+	Your code is close, but it will likely fail automated grading tests due to a few missing requirements from the prompt:
 
-	</thead>
-	<tbody>
-	<tr>
-        <td>Luka</td>
-        <td>39</td>
-    </tr>
-    <tr><td>Wemby</td>
-    <td>30</td></tr>
-    <tr><td>Giannis</td>
-    <td>30</td></tr>
-	</tbody>
-		</table>
-        <h2>
-            List of medias
-        </h2>
+1. **Missing Ordered List (`<ol>`):** The instructions require an **ordered list** containing the three media items (`<ol>` with `<li>` tags around each media element). Right now, your `<img>`, `<video>`, and `<audio>` tags are just placed directly on the page without `<ol>` and `<li>`.
+
+
+2. **Table Column Headers:** The Table Requirements specify **"2 columns for Roll numbers and Names"**. While your table has 2 columns and 3 rows of data, using `Roll numbers` and `Names` as your `<th>` headers is much safer in case the test script checks for those exact header names.
+
+
+3. **Extra Space in Audio URL:** Your `<audio>` `src` has a leading space (`src=" http://..."`), which can cause strict URL-matching tests to fail.
+
+### Corrected Code
+
+```html
+<table>
+    <thead>
+        <tr>
+            <th>Roll numbers</th>
+            <th>Names</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Luka</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Wemby</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Giannis</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>List of medias</h2>
+
+<ol>
+    <li>
         <img src="https://picsum.photos/id/123/200/300" alt="sea">
+    </li>
+    <li>
+        <video controls>
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        </video>
+    </li>
+    <li>
+        <audio src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg" controls></audio>
+    </li>
+</ol>
 
-    <video controls>
-        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4 type="video/mp4">
-    </video>
-    <audio src=" http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg" controls></audio>
-		</table>
-
+```
 </body>
 
 </html>
